@@ -1,0 +1,297 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="appIntranet_Sicnet.SICNET.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+      <title>::SICNET:: </title>
+     <link rel="icon" type="image/png" href="../img/logoSis.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css" />
+  
+    <!-- CSS Libs -->
+    <link href="../tools/dist/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/animate.min.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/bootstrap-switch.min.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/checkbox3.min.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="../tools/dist/lib/css/select2.min.css" rel="stylesheet" />
+   
+
+
+    <!-- CSS App -->
+    <link href="../tools/dist/css/style.css" rel="stylesheet" />
+    <link href="../tools/dist/css/themes/flat-blue.css" rel="stylesheet" />
+
+
+</head>
+<body class="flat-blue" >
+   <form runat="server" id="FORM">
+    
+        <div class="app-container">
+        <div class="row content-container">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"><asp:ContentPlaceHolder ID="titlePage" runat="server"></asp:ContentPlaceHolder></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-times icon"></i>
+                        </button>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o"></i></a>
+                            <ul class="dropdown-menu animated fadeInDown">
+                                <li class="title">
+                                    Mensajes  <span class="badge pull-right">0</span>
+                                </li>
+                                <li class="message">
+                                    No new notification
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown danger">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
+                            <ul class="dropdown-menu danger  animated fadeInDown">
+                                <li class="title">
+                                    Notificaciones <span class="badge pull-right">4</span>
+                                </li>
+                                <li>
+                                    <ul class="list-group notifications">
+                                       
+                                        <a>
+                                            <li class="list-group-item">
+                                                <span class="badge success">1</span> <i class="fa fa-check icon"></i> Ordenes sin aprobar
+                                            </li>
+                                        </a>                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><asp:Label runat="server" ID="lbl_User"></asp:Label><span class="caret"></span></a>
+                            <ul class="dropdown-menu animated fadeInDown">
+                                <li class="profile-img">                                    
+                                    <asp:Image ID="img_personal" runat="server" class="profile-img"  />
+                                </li>
+                                <li>
+                                    <div class="profile-info">
+                                        <h4 class="username"><asp:Label runat="server" ID="lbl_Nombre_personal"></asp:Label></h4>
+                                        <p><asp:Label runat="server" ID="lbl_email"></asp:Label></p>
+                                        <div class="btn-group margin-bottom-2x" role="group">
+                                       
+                                            <asp:Button CssClass="btn btn-default" runat="server" ID="btn_Profiles" OnClick="btn_Profiles_Click"  Text="Perfil"/>
+                                          
+                                            <asp:Button CssClass="btn btn-default" runat="server" ID="btn_Salir" OnClick="btn_Salir_Click" Text="Salir" />
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <div class="icon fa fa-cloud"></div>
+                                <div class="title">SICNET 1.1v</div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="index.aspx">
+                                    <span class="icon fa fa-tachometer"></span><span class="title">INICIO</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-element">
+                                    <span class="icon fa fa-balance-scale"></span><span class="title">COMERCIAL</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-element" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">                                            
+                                            <li><asp:LinkButton runat="server" Text="Ventas" ID="hp_Ventas" OnClick="hp_Ventas_Click"></asp:LinkButton>
+                                            </li>
+                                            <li><asp:LinkButton runat="server" Text="Ventas-Web" ID="hp_Ventas_web" OnClick="hp_Ventas_web_Click" ></asp:LinkButton>
+                                            </li>
+                                            <li><a href="ui-kits/grid.html">Pedidos</a>
+                                            </li>
+                                            <li><a href="ui-kits/button.html">Clientes</a>
+                                            </li>
+                                            <li><a href="ui-kits/card.html">Marketing</a>
+                                            </li>
+                                            <li><a href="ui-kits/list.html">Productos</a>
+                                            </li>
+                                            <li><a href="ui-kits/modal.html">RDV</a>
+                                            </li>
+                                            <li><a href="ui-kits/alert.html">Promociones</a>
+                                            </li>                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-table">
+                                    <span class="icon fa fa-table"></span><span class="title">ADMINISTRACION</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-table" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="gestionTareas.aspx">Gestion Gerencial</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-form">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">SOPORTE INTERNO</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-form" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="form/ui-kits.html">Form UI Kits</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Dropdown-->
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#component-example">
+                                    <span class="icon fa fa-cubes"></span><span class="title">LOGISTICA</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="component-example" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a>Proveedores</a>
+                                            </li>
+                                            <li><a>OCP</a>
+                                            </li>
+                                            <li><a href="almacen.aspx">Almacen</a>
+                                            </li>
+                                            <li><a href="inventario.aspx">Inventario</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Dropdown-->
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-example">
+                                    <span class="icon fa fa-slack"></span><span class="title">PRODUCCION</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-example" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Landing Page</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Dropdown-->
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-icon">
+                                    <span class="icon fa fa-archive"></span><span class="title">RR.HH.</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-icon" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="personal.aspx">Personal</a>
+                                            </li>
+                                            <li><a href="#">Font Awesomes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon fa fa-thumbs-o-up"></span><span class="title">License</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+           
+            
+
+               
+                    <asp:ContentPlaceHolder runat="server" ID="bodyweb">
+
+                     </asp:ContentPlaceHolder> 
+              
+           
+            
+        </div>
+        <footer class="app-footer">
+            <div class="wrapper">
+                <span class="pull-right">2.1 <a href="#"><i class="fa fa-long-arrow-up"></i></a></span> © 2016 Copyright UNI-TEC PERU.
+            </div>
+        </footer>
+        <div>
+  </div>
+            </div>
+
+
+
+      </form>
+
+
+
+
+            <!-- Javascript Libs -->
+    <script src="../tools/dist/lib/js/jquery.min.js"></script>
+    <script src="../tools/dist/lib/js/bootstrap.min.js"></script>
+    <script src="../tools/dist/lib/js/Chart.min.js"></script>
+
+    <script src="../tools/dist/lib/js/bootstrap-switch.min.js"></script>
+    <script src="../tools/dist/lib/js/jquery.matchHeight-min.js"></script>
+    <script src="../tools/dist/lib/js/dataTables.bootstrap.min.js"></script>
+
+    <script src="../tools/dist/lib/js/select2.full.min.js"></script>
+    <script src="../tools/dist/lib/js/ace/ace.js"></script>
+    <script src="../tools/dist/lib/js/ace/mode-html.js"></script>
+    <script src="../tools/dist/lib/js/ace/theme-github.js"></script>
+
+
+ 
+            <!-- Javascript -->
+            <script type="text/javascript" src="../js/MASTER/ace/app.js"></script>
+            <script type="text/javascript" src="../js/MASTER/ace/index.js"></script>
+</body>
+</html>
