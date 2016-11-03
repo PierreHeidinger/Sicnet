@@ -67,7 +67,7 @@
                                                   &nbsp;
                                               </td>
                                               <td>                                                  
-                                                   <asp:DropDownList runat="server" ID="cbo_web" CssClass="checkbox3 checkbox-inline checkbox-check checkbox-light" AutoPostBack="true" OnSelectedIndexChanged="cbo_web_SelectedIndexChanged">
+                                                   <asp:DropDownList runat="server" ID="cbo_web" CssClass="btn btn-default dropdown-toggle"  AutoPostBack="true" OnSelectedIndexChanged="cbo_web_SelectedIndexChanged">
                                                        <asp:ListItem Value="%">-- DISP WEB--</asp:ListItem>
                                                        <asp:ListItem Value="1">SI</asp:ListItem>
                                                        <asp:ListItem Value="0">NO</asp:ListItem>

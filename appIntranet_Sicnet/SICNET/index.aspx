@@ -14,7 +14,7 @@
 
      <div class="container-fluid">
                 <div class="side-body padding-top">
-                    <asp:ScriptManager ID="script1" runat="server"></asp:ScriptManager>
+     <%--               <asp:ScriptManager ID="script1" runat="server"></asp:ScriptManager>--%>
                     <asp:UpdatePanel runat="server" ID="panel1">
                         <ContentTemplate>
                         <asp:Timer runat="server" ID="Timer1" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>

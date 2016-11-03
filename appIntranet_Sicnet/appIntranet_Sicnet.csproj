@@ -264,6 +264,7 @@
     <Content Include="Global.asax" />
     <Content Include="SICNET\almacen.aspx" />
     <Content Include="SICNET\almacen_nuevo_detalle.aspx" />
+    <Content Include="SICNET\clientes.aspx" />
     <Content Include="SICNET\gestionTareas.aspx" />
     <Content Include="SICNET\index.aspx" />
     <Content Include="SICNET\inventario.aspx" />
@@ -410,6 +411,13 @@
     </Compile>
     <Compile Include="SICNET\almacen_nuevo_detalle.aspx.designer.cs">
       <DependentUpon>almacen_nuevo_detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SICNET\clientes.aspx.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SICNET\clientes.aspx.designer.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="SICNET\gestionTareas.aspx.cs">
       <DependentUpon>gestionTareas.aspx</DependentUpon>

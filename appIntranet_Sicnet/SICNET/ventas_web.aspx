@@ -58,7 +58,7 @@
                                     <hr />
                                       <asp:UpdatePanel runat="server" UpdateMode="Conditional">
                                       <ContentTemplate>
-                                      <asp:ScriptManager runat="server"></asp:ScriptManager>
+                                      
                                          <div style="overflow:auto;height:400px;width:100%">
                                                                                               <asp:DataGrid ID="dg_listado_al"  runat="server" Width="100%"  Font-Names="Verdana" Enabled="false" Font-Size="11" style="font-family:Helvetica Neue, Roboto, Arial,Droid Sans, sans-serif"
                                                                                                   PageSize="19" GridLines="Both"  BorderWidth="0px" AutoGenerateColumns="false"  HeaderStyle-Height="30" BorderStyle="Solid" BorderColor="Gray" ItemStyle-Height="30" OnItemDataBound="dg_listado_al_ItemDataBound"  >

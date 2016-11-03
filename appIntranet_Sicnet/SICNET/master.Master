@@ -33,8 +33,9 @@
 
 </head>
 <body class="flat-blue" >
-   <form runat="server" id="FORM">
     
+   <form runat="server" id="FORM">
+    <asp:ScriptManager runat="server"></asp:ScriptManager>
         <div class="app-container">
         <div class="row content-container">
             <nav class="navbar navbar-default navbar-fixed-top navbar-top">
@@ -65,24 +66,44 @@
                                 </li>
                             </ul>
                         </li>
+                        
+                     
                         <li class="dropdown danger">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> <asp:Label runat="server" ID="lbl_total_not_i"></asp:Label></a>
                             <ul class="dropdown-menu danger  animated fadeInDown">
                                 <li class="title">
-                                    Notificaciones <span class="badge pull-right">4</span>
+                                    Notificaciones <span class="badge pull-right"><asp:Label runat="server" ID="lbl_total_not"></asp:Label></span>
                                 </li>
-                                <li>
+                                <li>                                  
+
                                     <ul class="list-group notifications">
-                                       
-                                        <a>
+                                        <a href="#">
                                             <li class="list-group-item">
-                                                <span class="badge success">1</span> <i class="fa fa-check icon"></i> Ordenes sin aprobar
+                                                <span class="badge"><asp:Label runat="server" ID="lbl_pep_pendientes"></asp:Label></span> <i class="fa fa-exclamation-circle icon"></i> ped pendientes
                                             </li>
-                                        </a>                                        
+                                        </a>
+                                        <a href="#">
+                                            <li class="list-group-item">
+                                                <span class="badge success"><asp:Label runat="server" ID="lbl_entregados_sin_reg"></asp:Label></span> <i class="fa fa-check icon"></i> pep entregados S/R 
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="list-group-item">
+                                                <span class="badge danger"><asp:Label runat="server" ID="lbl_anulados"></asp:Label></span> <i class="fa fa-comments icon"></i> ped anulados
+                                            </li>
+                                        </a>
+                                        <a href="ventas_web.aspx">
+                                            <li class="list-group-item message">
+                                                view all
+                                            </li>
+                                        </a>
+
                                     </ul>
                                 </li>
                             </ul>
                         </li>
+
+                           
                         <li class="dropdown profile">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><asp:Label runat="server" ID="lbl_User"></asp:Label><span class="caret"></span></a>
                             <ul class="dropdown-menu animated fadeInDown">
@@ -138,7 +159,7 @@
                                             </li>
                                             <li><a href="ui-kits/grid.html">Pedidos</a>
                                             </li>
-                                            <li><a href="ui-kits/button.html">Clientes</a>
+                                            <li><a href="clientes.aspx">Clientes</a>
                                             </li>
                                             <li><a href="ui-kits/card.html">Marketing</a>
                                             </li>
@@ -175,7 +196,7 @@
                                 <div id="dropdown-form" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul class="nav navbar-nav">
-                                            <li><a href="form/ui-kits.html">Form UI Kits</a>
+                                            <li>
                                             </li>
                                         </ul>
                                     </div>
@@ -211,9 +232,9 @@
                                 <div id="dropdown-example" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul class="nav navbar-nav">
-                                            <li><a href="#">Login</a>
+                                            <li>
                                             </li>
-                                            <li><a href="#">Landing Page</a>
+                                            <li>
                                             </li>
                                         </ul>
                                     </div>
@@ -230,7 +251,7 @@
                                         <ul class="nav navbar-nav">
                                             <li><a href="personal.aspx">Personal</a>
                                             </li>
-                                            <li><a href="#">Font Awesomes</a>
+                                            <li>
                                             </li>
                                         </ul>
                                     </div>

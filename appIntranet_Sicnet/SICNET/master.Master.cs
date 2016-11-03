@@ -15,6 +15,7 @@ namespace appIntranet_Sicnet.SICNET
 
         #region "Declarariones"
         claseUtilitarios claseUtilitarios = new claseUtilitarios();
+        clasePedidosWeb clasePw = new clasePedidosWeb();
         DataTable oDS_Datos; 
        
         #endregion
@@ -39,6 +40,25 @@ namespace appIntranet_Sicnet.SICNET
                 Session["COD_PERSONAL"] = oDS_Datos.Rows[0]["COD_PERSONAL"].ToString();
             }
         }
+
+
+        public void Notificaciones()
+        {
+
+            String pendientes_out = "         ";
+            String emtregados_out = "         ";
+            String anulados_out = "         ";
+
+            lbl_pep_pendientes.Text = clasePw.public_Lista_VENTAS_WEB_NOT("1",pendientes_out);
+            lbl_entregados_sin_reg.Text = clasePw.public_Lista_VENTAS_WEB_NOT("2", emtregados_out);
+            lbl_anulados.Text = clasePw.public_Lista_VENTAS_WEB_NOT("3", anulados_out);
+
+           
+            lbl_total_not_i.Text = (int.Parse(lbl_pep_pendientes.Text) + int.Parse(lbl_entregados_sin_reg.Text) + int.Parse(lbl_anulados.Text)).ToString();
+            lbl_total_not.Text = lbl_total_not_i.Text;
+
+
+        }
         #endregion
 
 
@@ -53,7 +73,7 @@ namespace appIntranet_Sicnet.SICNET
             else
             {
                 mostrar_datos_personal(this.Page.User.Identity.Name.Trim());
-                
+                Notificaciones();
 
             }
         }
@@ -81,6 +101,11 @@ namespace appIntranet_Sicnet.SICNET
         protected void hp_Ventas_web_Click(object sender, EventArgs e)
         {
             Response.Redirect("ventas_web.aspx");
+        }
+
+        protected void Tm_notificaciones_Tick(object sender, EventArgs e)
+        {
+            Notificaciones();
         }
     }
 }

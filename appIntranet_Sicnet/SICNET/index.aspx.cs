@@ -15,18 +15,23 @@ namespace appIntranet_Sicnet.SICNET
 
         #region "Declarariones"
         claseUtilitarios claseUtilitarios = new claseUtilitarios();
+        clasePedidosWeb clasePw = new clasePedidosWeb();
         public DataTable oDS_Datos_chat = new DataTable();
+        public DataTable oDt_pentiendes = new DataTable();
         
 
         #endregion
 
-        public void listar_chat()
-        {
-            oDS_Datos_chat = claseUtilitarios.public_Mostrar_Datos_Chat();
-        }
+        
 
 
         #region "Procediminetos"
+
+
+        private void notificaciones()
+        {
+           
+        }
         
         
         private void cargar_gatgets() {
@@ -52,7 +57,7 @@ namespace appIntranet_Sicnet.SICNET
                 //CHAT
 
 
-                listar_chat();
+              
                 cargar_gatgets();
 
             }
@@ -62,7 +67,7 @@ namespace appIntranet_Sicnet.SICNET
         {
 
             cargar_gatgets();
-                    listar_chat();
+                    
         }
 
         protected void txt_chat_TextChanged(object sender, EventArgs e)

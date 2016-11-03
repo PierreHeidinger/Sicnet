@@ -70,5 +70,35 @@ namespace bibliotecaClases
 
         #endregion
 
+
+     
+
+
+
+        #region "aprobar-anular"
+
+        public String public_Lista_VENTAS_WEB_NOT(String a_IND_A, String a_NUMBER_OUT)
+        {
+            return private_Lista_VENTAS_WEB_NOT(a_IND_A, a_NUMBER_OUT);
+        }
+
+        private String private_Lista_VENTAS_WEB_NOT(String a_IND_A,String a_NUMBER_OUT)
+        {
+            cn.getcn.Open();
+
+            SqlCommand cmd = new SqlCommand("SP_VENTAS_WEB_NOTIFICACIONES_INDEX", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@IND_A", a_IND_A));
+            cmd.Parameters.Add(new SqlParameter("@NUMBER_OUT", a_NUMBER_OUT)).Direction = ParameterDirection.InputOutput;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            int i = cmd.ExecuteNonQuery();
+            cn.getcn.Close();
+            return cmd.Parameters["@NUMBER_OUT"].Value.ToString();
+        }
+
+
+        #endregion
+
+
     }
 }

@@ -184,10 +184,7 @@
                                                     </div>
                                                     <div class="modal-body">  
                                                      
-                                                   <!--  <asp:ScriptManager runat="server"></asp:ScriptManager>
-                                                    <asp:UpdatePanel runat="server"> 
-                                                   
-                                                        <ContentTemplate> -->                                                
+                                                                                            
                                                         <asp:Label runat="server" ID="lbl_grabado" Text=""></asp:Label>
                                                  <table>
                                                      <tr>

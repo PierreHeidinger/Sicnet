@@ -10,60 +10,78 @@
 namespace appIntranet_Sicnet.SICNET {
     
     
-    public partial class index {
+    public partial class clientes {
         
         /// <summary>
-        /// Control panel1.
+        /// Control btn_NUEVO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel panel1;
+        protected global::System.Web.UI.WebControls.Button btn_NUEVO;
         
         /// <summary>
-        /// Control Timer1.
+        /// Control btn_Imprimir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.Timer Timer1;
+        protected global::System.Web.UI.WebControls.Button btn_Imprimir;
         
         /// <summary>
-        /// Control lbl_ventas_sem.
+        /// Control btn_Email.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ventas_sem;
+        protected global::System.Web.UI.WebControls.Button btn_Email;
         
         /// <summary>
-        /// Control lbl_mes.
+        /// Control btn_Excel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_mes;
+        protected global::System.Web.UI.WebControls.Button btn_Excel;
         
         /// <summary>
-        /// Control lbl_Total_Productos.
+        /// Control div_error.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Total_Productos;
+        protected global::System.Web.UI.WebControls.Literal div_error;
         
         /// <summary>
-        /// Control lbl_total_productos_web.
+        /// Control div_confirmacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_total_productos_web;
+        protected global::System.Web.UI.WebControls.Literal div_confirmacion;
+        
+        /// <summary>
+        /// Control txt_nombres.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_nombres;
+        
+        /// <summary>
+        /// Control dg_listado_personal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid dg_listado_personal;
     }
 }

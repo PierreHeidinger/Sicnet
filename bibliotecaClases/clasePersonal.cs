@@ -12,7 +12,7 @@ namespace bibliotecaClases
     {
         claseConexion cn = new claseConexion();
 
-        #region "LISTA DE ITEMS"
+        #region "LISTA DE PERSONAL"
 
         public DataTable public_Lista_Personal(String A_DESCRIPCION)
         {

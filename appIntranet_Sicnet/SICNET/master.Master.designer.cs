@@ -31,6 +31,51 @@ namespace appIntranet_Sicnet.SICNET {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder titlePage;
         
         /// <summary>
+        /// Control lbl_total_not_i.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_total_not_i;
+        
+        /// <summary>
+        /// Control lbl_total_not.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_total_not;
+        
+        /// <summary>
+        /// Control lbl_pep_pendientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_pep_pendientes;
+        
+        /// <summary>
+        /// Control lbl_entregados_sin_reg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_entregados_sin_reg;
+        
+        /// <summary>
+        /// Control lbl_anulados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_anulados;
+        
+        /// <summary>
         /// Control lbl_User.
         /// </summary>
         /// <remarks>
