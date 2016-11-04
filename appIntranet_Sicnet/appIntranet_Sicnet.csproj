@@ -229,7 +229,11 @@
     <Content Include="img\thumbnails\picjumbo.com_IMG_4566.jpg" />
     <Content Include="img\warning.gif" />
     <Content Include="login\login.aspx" />
+    <Content Include="login\sources\1.jpg" />
+    <Content Include="login\sources\2.png" />
     <Content Include="login\sources\images.jpg" />
+    <Content Include="login\sources\log\index.js" />
+    <Content Include="login\sources\log\style.css" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
